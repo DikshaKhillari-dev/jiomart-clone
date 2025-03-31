@@ -1,0 +1,964 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.container{
+    height:3000px;
+}
+#header{
+    background-color:rgba(107, 131, 211, 0.993);
+    height:90px;   
+    display: flex;
+    align-items: center;
+}
+
+.location{
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-right: 5%;
+}
+
+.location:hover{
+    background-color: rgb(81, 81, 235);
+}
+
+.search{
+display: flex;
+align-items: center;
+gap: 10px; 
+margin:5px;
+background-color:rgb(46, 46, 163);
+border-radius: 10px;
+width: fit-content;
+}
+.search-input{
+    width:400px;
+}
+.cart-icon{
+   margin:50px;
+}
+.signin{
+    color:white;
+    margin-left:10px;
+    margin-bottom: 50%;
+}
+
+.navbar{
+    background-color:rgb(46, 46, 163);
+    padding: 10px;
+    height:40px;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+  .navbar-content a{
+    color:white;
+    text-decoration: none;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    display: none;
+    width: 200px;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 15;
+  }
+  .dropdown-menu a {
+    display: block;
+    padding: 12px 15px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu a:hover {
+    background:rgb(245, 240, 240);
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .submenu{
+    position: relative;
+  }
+  .submenu a{
+    display: block;
+    padding:12px 15px;
+    color:black;
+    text-decoration: none;
+  }
+  .submenu a:hover{
+    background:rgb(245, 240, 240);   
+  }
+  .submenu-menu{
+    position: absolute;
+    top:0%;
+    left:100%;
+    background: white;
+    display:none;
+    width:180px;    
+    padding: 5px 0;
+  }
+  .submenu-menu a{
+    display:block;
+    padding:10px;
+    color: black;
+    text-decoration: none;
+  }
+  .submenu-menu a:hover {
+    background:rgb(39, 28, 28); 
+  }
+  
+  .submenu:hover .submenu-menu {
+    display: block;
+  }
+
+ /* Carousel Container */
+.top-carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.top-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.topcarouselslide {
+  min-width: 33.33%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.topcarouselslide img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Carousel Navigation Buttons */
+.top-carousel-nav-button {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:50px;
+  margin-right:50px;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.top-carousel-nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Top Carousel Dots Indicators */
+.top-carousel-dots-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.topcarouseldot {
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.topcarouseldot.active {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Never Before Prices Section Start */
+
+.never-before-prices{
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height:250px;
+  margin: 20px auto;
+}
+
+.never-before-prices img{
+  width:100%;
+  border-radius: 30px; 
+}
+
+/* Apply now Carousel Start */
+.apply-now-carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: -20px auto;
+}
+
+.apply-now-carousel-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.apply-now-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px; /* Space between slides */
+}
+
+.applynowslide {
+  min-width: calc(100% / 3 - 10px); /* Show 3 slides at a time */
+  box-sizing: border-box;
+}
+
+.applynowslide img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.apply-now-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:50px;
+  margin-right:50px;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Second Carousel End */
+
+/* Shop now Carousel Start */
+.shop-now-carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: 60px auto;
+}
+
+.shop-now-carousel-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.shop-now-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px; /* Space between slides */
+}
+
+.shopnowslide {
+  min-width: calc(100% / 3 - 10px); /* Show 3 slides at a time */
+  box-sizing: border-box;
+}
+
+.shopnowslide img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.shop-now-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:50px;
+  margin-right:50px;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Shop now  Carousel End */
+
+/* Bumper Section Start */
+.bumper-offer{
+  position : relative;
+  margin: 60px;
+  bottom:20px;
+}
+
+.bumper-offer-carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top:15px;
+}
+
+.bumper-offer-carousel {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.bumperofferslide {
+  min-width: calc(100% / 6); /* Ensures 6 slides are visible at a time */
+}
+
+.bumperofferslide img{
+  width: 90%;
+  border-radius: 25px;
+}
+
+.bumper-offer-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
+/* Digi Utsav Section Start */
+
+.digi-utsav{
+  position: relative;
+  width: 90%;
+  height:200px;
+  margin: -40px auto;
+}
+
+.digi-utsav img{
+  width:100%;
+  border-radius: 25px; 
+}
+
+/* Digi Utsav Section end */
+
+/* shop from top categories section start */
+
+.top-categories{
+  position : relative;
+  margin: 60px;
+  bottom:-30px;
+}
+
+.top-categories-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px;
+  gap:10px;
+  margin-top: 20px;
+  
+}
+
+.grid-item img{
+  width: 100%;
+  height:auto;
+}
+
+/* cricket fever section start */
+.cricket-fever{
+  position: relative;
+  width: 90%;
+  height:240px;
+  margin: 280px auto;
+}
+
+.cricket-fever img{
+  width:100%;
+  border-radius: 30px; 
+}
+
+
+/* Shop now second grid container section start */
+.shop-now-second-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 100px;
+  padding: 120px 60px 10px 60px;
+  gap:15px;
+  margin-top: -380px;
+}
+
+.shop-now-second-grid-item img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Brands You section start */
+.brands-you{
+  position: relative;
+  width: 90%;
+  height:220px;
+  margin: 40px auto;
+}
+
+.brands-you img{
+  width:100%;
+  border-radius: 30px; 
+}
+
+/* Products grid section start */
+.products-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-right: 45px;
+}
+
+.products-grid-item img{
+  width: 95%;
+}
+
+/* Video grid section start */
+
+.video-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 40px;
+  margin-left: 65px;
+  margin-right: 35px;
+}
+
+.video-grid-item{
+  position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.video-grid-item video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px;
+}
+
+.mute-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  filter: invert(1);
+}
+
+.mute-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+.video-grid-item:hover .play-overlay {
+  display: block;
+}
+
+/* Latest Electronics Section start */
+.latest-electronics-container{
+  background-color: #ddf8ff;
+  height:400px;
+  margin-top:50px;
+}
+
+.latest-electronics-header{
+position : relative;
+ padding:30px;
+ margin:30px;
+ color:#AA0505 !important;
+}
+
+.latest-electronics-carousel-container {
+  position: relative;
+  width: 100%;
+  margin-top:30px;
+  max-width:1400px;
+  overflow: hidden;
+}
+
+.latest-electronics-carousel {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  gap: 2px;
+}
+
+.latestelectronicsslide {
+    min-width: calc(100% / 6 - 10px); /* 6 slides visible */
+    height: 300px;    
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 8px; /* Ensures 6 slides are visible at a time */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    padding: 10px;
+}
+
+.latestelectronicsslide img{
+  width: 100px;
+  height: 100px;;
+  border-radius: 25px;
+}
+
+.latest-electronics-nav-button {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Latest Electronics Section End */
+
+/* Home & Lifestyle Corner section start */
+
+.home-lifestyle-corner-container{
+  background-color: #ddf8ff;
+  height:400px;
+  margin-top:50px;
+}
+
+.home-lifestyle-corner-header{
+position : relative;
+ padding:30px;
+ margin:30px;
+ color:#AA0505 !important;
+}
+
+.view-all-btn{
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  margin-top:-30px;
+  color: rgb(46, 46, 163);
+  font-weight: bold;
+}
+
+.home-lifestyle-corner-carousel-container {
+  position: relative;
+  width: 100%;
+  margin-top:30px;
+  max-width:1400px;
+  overflow: hidden;
+}
+
+.home-lifestyle-corner-carousel {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  gap: 2px;
+}
+
+.homelifestylecornerslide {
+    min-width: calc(100% / 6 - 10px); /* 6 slides visible */
+    height: 300px;    
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 8px; /* Ensures 6 slides are visible at a time */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;    
+    padding: 10px;
+}
+
+.homelifestylecornerslide img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 25px;
+}
+
+.slide-content {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  min-height: 35px;
+  line-height: 1.2;
+  margin-top: 60px;
+  color: rgb(51, 51, 51); /* Darker color for better readability */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ensures long text gets truncated with "..." */
+}
+
+.heart-icon{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background:#fff;
+  border:none;
+  color: #ccc; /* Light gray default */
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.product-price-container {
+  display: flex;
+  align-items: left;
+  margin-top: 10px;
+}
+
+.product-price{
+  margin-top: 6px;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000; /* Black color for final price */
+}
+
+.product-deleted-price{
+  font-size: 14px;
+  margin-bottom:300px;
+  text-align:  left;
+  font-weight: bold;
+  color:#b5b5b5; 
+}
+
+.product-discount{
+  background-color: #e5f7ee; /* Light green background */
+  color: #00754a; /* JioMart green */
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+  position: relative;
+  margin-left: 8px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Push button to bottom */
+}
+
+.add-button {
+    padding: 8px 20px;  
+    background:#fff;
+    color: #004f61;
+    font-weight: bold;
+    cursor: pointer;
+    border:2px solid  #cfd8dc;
+    border-radius: 20px;
+    width: 80%; /* Ensure a consistent button size */
+}
+
+.home-lifestyle-corner-nav-button {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Curated Fashion Collection Section Start */
+.curated-fashion-collection-container{
+  background-color: #ddf8ff;
+  height:390px;
+  margin-top:50px;
+}
+
+.curated-fashion-collection-header{
+position : relative;
+ padding:30px;
+ margin:30px;
+ color:#AA0505 !important;
+}
+
+.curated-fashion-collection-carousel-container {
+  position: relative;
+  width: 100%;
+  margin-top:30px;
+  max-width:1400px;
+  overflow: hidden;
+}
+
+.curated-fashion-collection-carousel {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  gap: 2px;
+}
+
+.curatedfashioncollectionslide {
+    min-width: calc(100% / 6 - 10px); /* 6 slides visible */
+    height: 280px;    
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 8px; /* Ensures 6 slides are visible at a time */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    padding: 10px;
+}
+
+.curatedfashioncollectionslide img{
+  width: 50%;
+  height: 40%;
+  border-radius: 25px;
+}
+
+.curated-fashion-collection-nav-button {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Gloabl store Section Start */
+
+.global-store{
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height:200px;
+  margin: 40px auto;
+}
+
+.global-store img{
+  width:100%;
+  border-radius: 30px; 
+}
+
+/* Continue shopping Section Start */
+
+.continue-shopping{
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height:200px;
+  margin: 40px auto;
+}
+
+.continue-shopping img{
+  width:100%;
+  border-radius: 20px; 
+}
+
+/* JioMart cares section start */
+
+/* Continue shopping Section Start */
+
+.jiomart-cares{
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height:200px;
+  margin: 20px auto;
+}
+
+.jiomart-cares img{
+  width:100%;
+  border-radius: 20px; 
+}
+
+/* Footer Section Start */
+
+footer {
+  background-color: #e1e2e4;
+  padding: 30px 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 18%;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.app-links img {
+  width: 140px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
